@@ -1,0 +1,15 @@
+yxxxxxxxxxxxxxxxxxxx
+y...................
+y.xxx.xxx..xxx.xxxxx
+y..................y
+y.xxx.y.xxxx.y.xxx.y
+y.....y......y.....y
+yyyyy.xxx..xxx.yyyyy
+xxxxx.c.....d..xxxxx
+......yxxxxxxy......
+yyyyy.y  b   y......
+yxxxx.xxxxxxxx.xxxxx
+y........e.........y
+y.xxxxxxxxxxxxxxxx.y
+y........p.........y
+xxxxxxxxxxxxxxxxxxxx
