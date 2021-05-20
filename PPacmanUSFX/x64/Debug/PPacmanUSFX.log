@@ -1,0 +1,18 @@
+﻿  Fantasma.cpp
+  Fruta.cpp
+  GameManager.cpp
+E:\3ro SEMESTRE\sis457\jalimonc_SIS457\PPacmanUSFX\GameManager.cpp(17,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  GameObject.cpp
+  main.cpp
+  MapGenerator.cpp
+  Moneda.cpp
+  Pacman.cpp
+  Pared.cpp
+  Pila.cpp
+  Texture.cpp
+  TextureAnimation.cpp
+  TextureManager.cpp
+  Tile.cpp
+  TileGraph.cpp
+  Generando código...
+  PPacmanUSFX.vcxproj -> E:\3ro SEMESTRE\sis457\jalimonc_SIS457\x64\Debug\PPacmanUSFX.exe
