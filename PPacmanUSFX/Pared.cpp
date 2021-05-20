@@ -15,6 +15,12 @@ GameObject(_paredTextura, _posicionX, _posicionY, _ancho, _alto, _anchoPantalla,
 		posicionX = 0;
 		posicionY = 0;
 	}
+	visible = false;
+
+	tiempoVisible = 500;
+	tiempoNoVisible = 350;
+	contadorTiempoVisible = 0;
+	contadorTiempoNoVisible = 0;
 };
 
 void Pared::setTile(Tile* _tileNuevo) {
