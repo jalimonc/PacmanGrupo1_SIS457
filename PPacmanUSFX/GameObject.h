@@ -75,5 +75,6 @@ public:
 	virtual void render();
 	virtual void update();
 	virtual void handleEvent(SDL_Event* event) {};
+
 };
 

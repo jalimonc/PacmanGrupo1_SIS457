@@ -11,6 +11,7 @@
 #include "TileGraph.h"
 #include "MoveDirection.h"
 #include "TextureAnimation.h" 
+#include "Pared.h"
 
 using namespace std;
 

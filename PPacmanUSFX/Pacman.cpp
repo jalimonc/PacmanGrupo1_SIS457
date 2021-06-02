@@ -123,10 +123,13 @@ bool Pacman::tratarDeMover(MoveDirection _direccionNueva)
 
 	// Si el tile destino es una pared, no se puede avanzar ahi
 	if (tileDestino->getPared() != nullptr) {
+		if (tileDestino->getPared()->getVisible()!= true) {
+			setTileSiguiente(tileDestino);
+			return true;
+		}
 		setTileSiguiente(nullptr);
 		return false;
 	}
-
 	setTileSiguiente(tileDestino);
 
 	return true;
