@@ -1,24 +1,23 @@
 #pragma once
 #include "GameObject.h"
+#include "TipoTexturaPared.h"
 #include "TileGraph.h"
-#include "Tile.h"
 
 class Pared :
     public GameObject
 {
-private:
+protected:
     Tile* tileActual;
-    int tiempoVisible;
-    int tiempoNoVisible;
-
-    int contadorTiempoVisible;
-    int contadorTiempoNoVisible;
-
+    int frameX;
+    int frameY;
+    int altoClip;
+    int anchoClip;
+    int tipoTexturaPared;
 public:
-    Pared(Tile* _tile, Texture* _paredTextura, int _posicionX, int _posicionY, int _ancho, int _alto, int _anchoPantalla, int _altoPantalla);
+    Pared(Tile* _tile, Texture* _paredTextura, int _posicionX, int _posicionY);
     Tile* getTile() { return tileActual; }
     void setTile(Tile* _tileNuevo);
-    void update();
     void render() override;
+    void setTexture(int tipoTextura);
 };
 

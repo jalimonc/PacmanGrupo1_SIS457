@@ -1,5 +1,10 @@
 #include "TileGraph.h"
 
+int TileGraph::anchoTileGraph = 0;
+int TileGraph::altoTileGraph = 0;
+int TileGraph::anchoPantalla = 0;
+int TileGraph::altoPantalla = 0;
+
 TileGraph::TileGraph()
 {
 	//tiles = nullptr;
@@ -8,7 +13,7 @@ TileGraph::TileGraph()
 	altoTileGraph = 0;
 }
 
-TileGraph::TileGraph(int _anchoTileGraph, int _altoTileGraph)
+TileGraph::TileGraph(int _anchoTileGraph, int _altoTileGraph, int _anchoPantalla, int _altoPantalla)
 {
 	for (int y = 0; y < _altoTileGraph; y++) {
 		for (int x = 0; x < _anchoTileGraph; x++) {
@@ -18,6 +23,8 @@ TileGraph::TileGraph(int _anchoTileGraph, int _altoTileGraph)
 
 	anchoTileGraph = _anchoTileGraph;
 	altoTileGraph = _altoTileGraph;
+	anchoPantalla = _anchoPantalla;
+	altoPantalla = _altoPantalla;
 }
 
 void TileGraph::reconfigurar(int _anchoTileGraph, int _altoTileGraph)

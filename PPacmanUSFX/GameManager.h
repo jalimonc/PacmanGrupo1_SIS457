@@ -16,6 +16,9 @@
 #include "MapGenerator.h"
 #include "TileGraph.h"
 #include "TextureManager.h"
+#include "FactoryPacmanClasico.h"
+#include "FactoryPacmanGalactico.h"
+#include "FactoryPacmanAsesino.h"
 
 using namespace std;
 
@@ -36,10 +39,16 @@ private:
     SDL_Renderer* gRenderer;
    
     vector<GameObject*> actoresJuego;
+    list<GameObject*> lactoresJuego;
     MapGenerator* generadorNivelJuego;
     TextureManager* textureManager;
-public:
+    Factory* tipoFabrica;
+
     GameManager();
+    static GameManager* instancia;
+public:
+    static GameManager* crearInstancia();
+
     int onExecute();
     bool onInit();
     void onEvent(SDL_Event* Event);

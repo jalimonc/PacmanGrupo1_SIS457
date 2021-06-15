@@ -23,7 +23,7 @@ private:
     Tile* tileActual;
 
 public:
-    Moneda(Tile* _tile, Texture* _monedaTextura, int _posicionX, int _posicionY, int _ancho, int _alto, int _anchoPantalla, int _altoPantalla);
+    Moneda(Tile* _tile, Texture* _monedaTextura, int _posicionX, int _posicionY);
 
     int getValor() { return valor; }
     PODER_MONEDA getTipoPoderMoneda() { return tipoPoderMoneda; }
@@ -35,6 +35,7 @@ public:
     void setTiempoPoderMoneda(int _tiempoPoderMoneda) { tiempoPoderMoneda = _tiempoPoderMoneda; }
     void setTile(Tile* _tileNuevo);
 
+    void deleteGameObject() override;
     //void render();
 
 };
