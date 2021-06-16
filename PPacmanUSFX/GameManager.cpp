@@ -18,7 +18,7 @@ GameManager::GameManager() {
 	gRenderer = nullptr;
 
 	juego_en_ejecucion = true;
-	tipoFabrica = new FactoryPacmanClasico;
+	//tipoFabrica = new FactoryPacmanClasico;
 	//tipoFabrica = new FactoryPacmanGalactico;
 	tipoFabrica = new FactoryPacmanAsesino;
 }
