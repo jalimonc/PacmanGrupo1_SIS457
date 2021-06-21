@@ -17,6 +17,5 @@ public:
 
 	//Manejador de Eventos
 	void update() override;
-
 };
  

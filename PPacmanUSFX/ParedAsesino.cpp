@@ -1,13 +1,11 @@
 #include "ParedAsesino.h"
 
-ParedAsesino::ParedAsesino(Tile* _tile, Texture* _paredTextura, int _posicionX, int _posicionY, bool _isElectrica)
+ParedAsesino::ParedAsesino(bool _isElectrica, int tipo, Tile* _tile, Texture* _paredTextura, int _posicionX, int _posicionY)
 	:Pared(_tile, _paredTextura, _posicionX, _posicionY)
 {
-	tipoTexturaPared = 14;
-	setTexture(tipoTexturaPared);
 	isElectrica = _isElectrica;
 	tileActual = _tile;
-	isAsesino = true;
+	isGalactico = true;
 	state = 0;
 }
 

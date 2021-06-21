@@ -31,6 +31,7 @@ protected:
 	int numeroFrutaVisible;
 
 	Tile* tileActual;
+	//GameObjectType returType() { return FRUTA; }
 public:
 
 	//vector<Texture*>frutaTexture;

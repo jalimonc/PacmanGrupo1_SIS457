@@ -16,12 +16,12 @@ enum PODER_MONEDA {
 class Moneda :
     public GameObject
 {
-private:
+protected:
     int valor;
     PODER_MONEDA tipoPoderMoneda;
     int tiempoPoderMoneda;
     Tile* tileActual;
-
+    GameObjectType returType() { return MONEDA; }
 public:
     Moneda(Tile* _tile, Texture* _monedaTextura, int _posicionX, int _posicionY);
 

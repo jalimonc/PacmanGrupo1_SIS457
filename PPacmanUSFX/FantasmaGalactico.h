@@ -3,12 +3,12 @@
 class FantasmaGalactico :
     public Fantasma
 {
-private:
+protected:
 
     Tile* tileActual;
 
     Tile* tileSiguiente;
-
+    
 
 public:
 
@@ -19,4 +19,5 @@ public:
     void setTileSiguiente(Tile* _tileNuevoSiguiente) { tileSiguiente = _tileNuevoSiguiente; }
 
     void update() override;
+    Fantasma* clone();
 };

@@ -1,5 +1,7 @@
 #pragma once
 #include "Fantasma.h"
+#include "TileGraph.h"
+
 class FantasmaAsesino :
     public Fantasma
 {

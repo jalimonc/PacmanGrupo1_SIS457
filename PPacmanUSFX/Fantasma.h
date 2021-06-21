@@ -13,19 +13,25 @@
 #include "TextureAnimation.h"
 #include "PathFinder.h"
 #include "Pacman.h"
-
+#include "GameObjectType.h"
 
 using namespace std;
+
+enum GameFantasmaType {
+	FANTASMA_CLASICO,
+	FANTASMA_GALACTICO
+};
+
 
 class Fantasma : public GameObject {
 protected:
 	//Velocidad en eje X y Y
 	
 	//Velocidad a la que mueve el fantasma en cualquier eje
-	int velocidadPatron;
+	GameFantasmaType tipoFantasma;
 
-	int posicionXDestino;
-	int posicionYDestino;
+
+	int velocidad;
 
 	int incrementoPosicionX;
 	int incrementoPosicionY;
@@ -42,20 +48,24 @@ protected:
 	TextureAnimation* texturaAnimacion;
 
 	bool tratarDeMover(MoveDirection _direccionNueva);
+	
+public:
+	virtual Fantasma* clone() = 0;
+
+	GameFantasmaType returnGameFantasmaType() { return tipoFantasma; }
 public:
 	//Constructores y destructores
-	Fantasma(Tile* _tile, Texture* _fantasmaTexture, int _posicionX, int _posicionY, int _velocidadPatron);
+	Fantasma(Tile* _tile, Texture* _fantasmaTexture, int _posicionX, int _posicionY, int _velocidad);
 	//~Fantasma();
 
 	//Metodos accesores
-
+	void reconfigurar(Tile* _tile, int _posicionX, int _posicionY, int _velocidad);
 	
-	int getVelocidadPatron() { return velocidadPatron; }
+	int getVelocidadPatron() { return velocidad; }
 	Tile* getTile() { return tileActual; }
 	Tile* getTileSiguiente() { return tileSiguiente; }
-
 	
-	void setVelocidadPatron(int _velocidadPatron) { velocidadPatron = _velocidadPatron; }
+	void setVelocidadPatron(int _velocidad) { velocidad = _velocidad; }
 	void setTile(Tile* _tileNuevo);
 	void setTileSiguiente(Tile* _tileNuevoSiguiente) { tileSiguiente = _tileNuevoSiguiente; }
 
