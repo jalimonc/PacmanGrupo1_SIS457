@@ -1,7 +1,11 @@
 #include "FantasmaGalactico.h"
 
+<<<<<<< HEAD
 
 FantasmaGalactico::FantasmaGalactico(Tile* _tile, Texture* _fantasmaGalacticoTextura, int _posicionX, int _posicionY, int _velocidad) :
+=======
+FantasmaGalactico::FantasmaGalactico(Tile* _tile, Texture* _fantasmaGalacticoTextura, int _posicionX, int _posicionY, int _velocidadPatron) :
+>>>>>>> 4c8f1c7a7eeeeced1ad83c59cdbed0d92bf4476c
 
 	Fantasma(_tile, _fantasmaGalacticoTextura, _posicionX, _posicionY, _velocidad)
 

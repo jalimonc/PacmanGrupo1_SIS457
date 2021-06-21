@@ -18,6 +18,7 @@
 #include "TextureAnimation.h"
 #include "FactoryPacmanClasico.h"
 #include "FactoryPacmanGalactico.h"
+#include "FactoryPacmanAsesino.h"
 #include "Factory.h"
 #include "FantasmasFactory.h"
 
