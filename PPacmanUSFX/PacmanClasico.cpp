@@ -64,8 +64,3 @@ PacmanClasico::~PacmanClasico()
 	//Free();
 }
 
-bool PacmanClasico::tratarDeMover(MoveDirection _direccionNueva)
-{
-	return false;
-}
-

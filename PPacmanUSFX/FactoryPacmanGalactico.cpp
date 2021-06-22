@@ -5,7 +5,7 @@ GameObject* FactoryPacmanGalactico::createPacmanInstance(Tile* _tile, TextureMan
 }
 
 GameObject* FactoryPacmanGalactico::createFantasmaInstance(Tile* _tile, TextureManager* _textureManager, int _posicionX, int _posicionY, int _velocidad) {
-    return new FantasmaGalactico(_tile, _textureManager->getTexture("fantasma_Asesino1"), _posicionX, _posicionY, _velocidad);
+    return new FantasmaGalactico(_tile, _textureManager->getTexture("fantasma_galactico1"), _posicionX, _posicionY, _velocidad);
 }
 
 GameObject* FactoryPacmanGalactico::createParedInstance(Tile* _tile, TextureManager* _textureManager, int _posicionX, int _posicionY, bool _isElectric) {

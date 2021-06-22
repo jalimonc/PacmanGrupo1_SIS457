@@ -37,7 +37,6 @@ protected:
 	int energia;
 	int state;
 
-	GameObjectType returType() { return PACMAN; }
 public:
 	Pacman(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _velocidad);
 

@@ -1,16 +1,13 @@
 #include "FantasmaGalactico.h"
 
-<<<<<<< HEAD
 
-FantasmaGalactico::FantasmaGalactico(Tile* _tile, Texture* _fantasmaGalacticoTextura, int _posicionX, int _posicionY, int _velocidad) :
-=======
 FantasmaGalactico::FantasmaGalactico(Tile* _tile, Texture* _fantasmaGalacticoTextura, int _posicionX, int _posicionY, int _velocidadPatron) :
->>>>>>> 4c8f1c7a7eeeeced1ad83c59cdbed0d92bf4476c
 
-	Fantasma(_tile, _fantasmaGalacticoTextura, _posicionX, _posicionY, _velocidad)
+	Fantasma(_tile, _fantasmaGalacticoTextura, _posicionX, _posicionY, _velocidadPatron)
 
 
 {
+
 	tileActual = _tile;
 	tileSiguiente = nullptr;
 
@@ -25,9 +22,6 @@ FantasmaGalactico::FantasmaGalactico(Tile* _tile, Texture* _fantasmaGalacticoTex
 		posicionX = 0;
 		posicionY = 0;
 	}
-
-	tipoFantasma = FANTASMA_GALACTICO;
-
 };
 
 void FantasmaGalactico::setTile(Tile* _tileNuevo) {
@@ -88,16 +82,16 @@ void FantasmaGalactico::update()
 		switch (direccionActual)
 		{
 		case MOVE_UP:
-			posicionY = std::max(posicionY - velocidad, tileSiguiente->getPosicionY() * Tile::altoTile);
+			posicionY = std::max(posicionY - velocidadPatron, tileSiguiente->getPosicionY() * Tile::altoTile);
 			break;
 		case MOVE_DOWN:
-			posicionY = std::min(posicionY + velocidad, tileSiguiente->getPosicionY() * Tile::altoTile);
+			posicionY = std::min(posicionY + velocidadPatron, tileSiguiente->getPosicionY() * Tile::altoTile);
 			break;
 		case MOVE_LEFT:
-			posicionX = std::max(posicionX - velocidad, tileSiguiente->getPosicionX() * Tile::anchoTile);
+			posicionX = std::max(posicionX - velocidadPatron, tileSiguiente->getPosicionX() * Tile::anchoTile);
 			break;
 		case MOVE_RIGHT:
-			posicionX = std::min(posicionX + velocidad, tileSiguiente->getPosicionX() * Tile::anchoTile);
+			posicionX = std::min(posicionX + velocidadPatron, tileSiguiente->getPosicionX() * Tile::anchoTile);
 			break;
 		}
 
@@ -115,9 +109,4 @@ void FantasmaGalactico::update()
 		if ((direccionActual == MOVE_LEFT || direccionActual == MOVE_RIGHT) && posicionX == tileSiguiente->getPosicionX() * Tile::anchoTile)
 			setTile(tileSiguiente);
 	}
-}
-
-Fantasma* FantasmaGalactico::clone()
-{
-	return new FantasmaGalactico(*this);
 }

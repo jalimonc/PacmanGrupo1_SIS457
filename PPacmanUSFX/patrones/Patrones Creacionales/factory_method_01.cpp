@@ -41,7 +41,7 @@ Copa* Copa::getCopa(std::string color)
 	else if (color == "azul")
 		return new CopaAzul();
 	else
-		return nullptr;
+		return NULL;
 }
 
 
@@ -126,14 +126,14 @@ int main()
 //		else if (type == 2)
 //			pVehicle = new FourWheeler();
 //		else
-//			pVehicle = nullptr;
+//			pVehicle = NULL;
 //	}
 //
 //	~Client() {
 //		if (pVehicle)
 //		{
 //			delete[] pVehicle;
-//			pVehicle = nullptr;
+//			pVehicle = NULL;
 //		}
 //	}
 //
@@ -195,7 +195,7 @@ int main()
 //		return new ThreeWheeler();
 //	else if (type == VT_FourWheeler)
 //		return new FourWheeler();
-//	else return nullptr;
+//	else return NULL;
 //}
 //
 //// Client class 
@@ -212,7 +212,7 @@ int main()
 //	~Client() {
 //		if (pVehicle) {
 //			delete[] pVehicle;
-//			pVehicle = nullptr;
+//			pVehicle = NULL;
 //		}
 //	}
 //	Vehicle* getVehicle() {

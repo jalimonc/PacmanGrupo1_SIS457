@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include "Texture.h"
-#include "GameObjectType.h"
 
 using namespace std;
 
@@ -19,7 +18,6 @@ protected:
 
 	// Si el objeto es visible
 	bool eliminar;
-	GameObjectType tipoObjeto;
 	
 //Propiedades para representacion grafica
 protected:
@@ -45,9 +43,9 @@ protected:
 public:
 	static TileGraph* tileGraph;
 
+
 public:
 	//Constructores y destructores
-	GameObject();
 	GameObject(Texture* _textura, int _posicionX, int _posicionY);
 	~GameObject() {};
 
@@ -82,7 +80,5 @@ public:
 	virtual void handleEvent(SDL_Event* event) {};
 	virtual void deleteGameObject() { eliminar = true; }
 	virtual void free(){};
-	void Delete() { deleteGameObject(); }
-	void Free() { free(); }
 };
 

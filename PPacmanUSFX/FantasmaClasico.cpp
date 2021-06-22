@@ -1,7 +1,10 @@
 #include "FantasmaClasico.h"
 
 FantasmaClasico::FantasmaClasico(Tile* _tile, Texture* _fantasmaClasicoTextura, int _posicionX, int _posicionY, int _velocidadPatron) :
+
 	Fantasma(_tile, _fantasmaClasicoTextura, _posicionX, _posicionY, _velocidadPatron)
+
+	
 {
 
 	tileActual = _tile;
@@ -18,26 +21,19 @@ FantasmaClasico::FantasmaClasico(Tile* _tile, Texture* _fantasmaClasicoTextura, 
 		posicionX = 0;
 		posicionY = 0;
 	}
+};
 
-	tipoFantasma = FANTASMA_CLASICO;
-}
+void FantasmaClasico::setTile(Tile* _tileNuevo) {
+	if (tileActual != nullptr)
+		tileActual->setFantasma(nullptr);
 
-Fantasma* FantasmaClasico::clone()
-{
-	return new FantasmaClasico(*this);
-}
+	tileActual = _tileNuevo;
 
-//void FantasmaClasico::setTile(Tile* _tileNuevo) {
-//	if (tileActual != nullptr)
-//		tileActual->setFantasma(nullptr);
-//
-//	tileActual = _tileNuevo;
-//
-//	if (tileActual != nullptr) {
-//		tileActual->setFantasma(this);
-//
-//		posicionX = tileActual->getPosicionX() * Tile::anchoTile;
-//		posicionY = tileActual->getPosicionY() * Tile::altoTile;
-//	}
-//};
-//
+	if (tileActual != nullptr) {
+		tileActual->setFantasma(this);
+
+		posicionX = tileActual->getPosicionX() * Tile::anchoTile;
+		posicionY = tileActual->getPosicionY() * Tile::altoTile;
+	}
+};
+

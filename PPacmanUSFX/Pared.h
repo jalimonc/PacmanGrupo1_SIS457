@@ -13,7 +13,6 @@ protected:
     int altoClip;
     int anchoClip;
     int tipoTexturaPared;
-    GameObjectType returType() { return PARED; }
 public:
     Pared(Tile* _tile, Texture* _paredTextura, int _posicionX, int _posicionY);
     Tile* getTile() { return tileActual; }

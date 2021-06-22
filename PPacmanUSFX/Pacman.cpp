@@ -124,6 +124,30 @@ bool Pacman::tratarDeMover(MoveDirection _direccionNueva)
 		break;
 	}
 
+	/*if (direccionSiguiente == MOVE_RIGHT && tileDestino == nullptr) {
+		tileActual = tileGraph->getTileEn(0, 8);
+		tileDestino = tileGraph->getTileEn(1, 8);
+		posicionX = tileActual->getPosicionX() * Tile::anchoTile;
+		posicionY = tileActual->getPosicionY() * Tile::altoTile;
+	}*/
+	if (direccionSiguiente == MOVE_RIGHT && tileDestino == nullptr) {
+		tileActual = tileGraph->getTileEn(0, 8);
+		tileDestino = tileGraph->getTileEn(1, 8);
+		posicionX = tileActual->getPosicionX() * Tile::anchoTile;
+		posicionY = tileActual->getPosicionY() * Tile::altoTile;
+		if (tileActual->getMoneda() != nullptr) {
+			tileActual->getMoneda()->deleteGameObject();
+		}
+	}
+	if (direccionSiguiente == MOVE_LEFT && tileDestino == nullptr) {
+		tileActual = tileGraph->getTileEn(19, 8);
+		tileDestino = tileGraph->getTileEn(18, 8);
+		posicionX = tileActual->getPosicionX() * Tile::anchoTile;
+		posicionY = tileActual->getPosicionY() * Tile::altoTile;
+		if (tileActual->getMoneda() != nullptr) {
+			tileActual->getMoneda()->deleteGameObject();
+		}
+	}
 	// Si el tile destino es nullptr, no se puede avanzar ahi
 	if (tileDestino == nullptr) {
 		setTileSiguiente(nullptr);

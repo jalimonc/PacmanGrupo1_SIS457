@@ -1,4 +1,11 @@
-﻿  FactoryPacmanAsesino.cpp
-  TextureManager.cpp
+﻿  FactoryPacmanClasico.cpp
+  FactoryPacmanGalactico.cpp
+  GameManager.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457\PPacmanUSFX\GameManager.cpp(31,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+  main.cpp
+  MapGenerator.cpp
+  PacmanClasico.cpp
+  ParedClasico.cpp
+  TileGraph.cpp
   Generando código...
-  PPacmanUSFX.vcxproj -> C:\Users\CarlosWalterPachecoL\Source\Repos\jalimonc\jalimonc_SIS457\x64\Debug\PPacmanUSFX.exe
+  PPacmanUSFX.vcxproj -> E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457\x64\Debug\PPacmanUSFX.exe

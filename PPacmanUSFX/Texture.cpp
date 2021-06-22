@@ -57,12 +57,12 @@ bool Texture::loadFromRenderedText(TTF_Font* font, std::string text, SDL_Color t
 	free();
 
 	// Return if the renderer was not set
-	if (renderer == nullptr)
+	if (renderer == NULL)
 		return false;
 
 	// Render the text using SDL_ttf library
 	SDL_Surface* loadedSurface = TTF_RenderText_Solid(font, text.c_str(), textColor);
-	if (loadedSurface == nullptr) {
+	if (loadedSurface == NULL) {
 		printf("Unable to render text! SDL_ttf Error: %s\n", TTF_GetError());
 		return false;
 	}
@@ -89,9 +89,9 @@ void Texture::render(int x, int y, SDL_Rect* clip, SDL_Rect* rect, double angle,
 	// Return if the renderer was not set
 	if (renderer == nullptr)
 		return;
-	if (rect == nullptr) {
+	if (rect == NULL) {
 		SDL_Rect rect = { x, y, getAncho(), getAlto() };
-		if (clip != nullptr) {
+		if (clip != NULL) {
 			rect.w = clip->w;
 			rect.h = clip->h;
 		}
@@ -100,25 +100,6 @@ void Texture::render(int x, int y, SDL_Rect* clip, SDL_Rect* rect, double angle,
 	else
 		SDL_RenderCopyEx(renderer, texture, clip, rect, angle, center, renderFlip);
 }
-
-void Texture::Render(int x, int y, SDL_Rect* clip, double angle, SDL_Point* center, SDL_RendererFlip renderFlip)
-{
-	// Return if the renderer was not set
-	if (renderer == nullptr)
-		return;
-
-	SDL_Rect renderQuad = { x, y, getAncho(), getAlto() };
-
-	if (clip != nullptr) {
-		renderQuad.w = clip->w;
-		renderQuad.h = clip->h;
-	}
-
-	SDL_RenderCopyEx(renderer, texture, clip, &renderQuad, angle, center, renderFlip);
-}
-
-
-
 
 void Texture::setColor(Uint8 red, Uint8 green, Uint8 blue)
 {
@@ -138,7 +119,7 @@ void Texture::setAlpha(Uint8 alpha)
 void Texture::free()
 {
 	if (texture != nullptr) {
-		// Free the texture and set its pointer to nullptr
+		// Free the texture and set its pointer to NULL
 		SDL_DestroyTexture(texture);
 		texture = nullptr;
 

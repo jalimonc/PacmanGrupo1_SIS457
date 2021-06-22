@@ -5,5 +5,6 @@ class MonedaGalactico :
 {
 public:
     MonedaGalactico(Tile* _tile, Texture* _monedaTextura, int _posicionX, int _posicionY);
+
 };
 
