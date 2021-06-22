@@ -22,7 +22,6 @@ class PacmanClasico :
 {
 protected:
 	//PROPIEDADES
-
 	int vida;
 	int portal;
 

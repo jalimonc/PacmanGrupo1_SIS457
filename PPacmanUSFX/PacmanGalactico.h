@@ -22,7 +22,6 @@ using namespace std;
 class PacmanGalactico :
 	public Pacman
 {
-
 };
 
 
