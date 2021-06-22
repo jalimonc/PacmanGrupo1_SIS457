@@ -37,7 +37,6 @@
     <ClCompile Include="MonedaClasico.cpp" />
     <ClCompile Include="MonedaGalactico.cpp" />
     <ClCompile Include="Pacman.cpp" />
-    <ClCompile Include="PacmanBase.cpp" />
     <ClCompile Include="PacmanClasico.cpp" />
     <ClCompile Include="PacmanGalactico.cpp" />
     <ClCompile Include="Pared.cpp" />
@@ -70,7 +69,6 @@
     <ClInclude Include="MonedaGalactico.h" />
     <ClInclude Include="MoveDirection.h" />
     <ClInclude Include="Pacman.h" />
-    <ClInclude Include="PacmanBase.h" />
     <ClInclude Include="PacmanClasico.h" />
     <ClInclude Include="PacmanGalactico.h" />
     <ClInclude Include="Pared.h" />

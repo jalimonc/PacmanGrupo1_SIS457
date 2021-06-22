@@ -1,7 +1,7 @@
 #include "FactoryPacmanGalactico.h"
 
 GameObject* FactoryPacmanGalactico::createPacmanInstance(Tile* _tile, TextureManager* _textureManager, int _posicionX, int _posicionY, int _velocidad) {
-    return new PacmanGalactico(_tile, _textureManager->getTexture("pacman_galactico"), _posicionX, _posicionY, _velocidad);
+    return Pacman::crearInstancia(_tile, _textureManager->getTexture("pacman_galactico"), _posicionX, _posicionY, _velocidad);
 }
 
 GameObject* FactoryPacmanGalactico::createFantasmaInstance(Tile* _tile, TextureManager* _textureManager, int _posicionX, int _posicionY, int _velocidad) {

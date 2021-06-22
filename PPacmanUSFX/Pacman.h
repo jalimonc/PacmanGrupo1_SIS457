@@ -37,17 +37,19 @@ protected:
 	int energia;
 	int state;
 
-public:
 	Pacman(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _velocidad);
+	static Pacman* instancia;
 
-	//	static Pacman* crearInstancia(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _ancho, int _alto, int _anchoPantalla, int _altoPantalla, int _velocidadPatron);
+public:
+	static Pacman* crearInstancia(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _velocidad);
 
-		//Constructores y destructores
-
-		//~Pacman();
+	static const int Width = 25;
+	static const int Height = 25;
 
 		//Metodos accesores
 	
+	bool tratarDeMover(MoveDirection _direccionNueva);
+
 	int getState() { return state; }
 	void setState(int _state) { state = _state; }
 
@@ -65,7 +67,6 @@ public:
 	void setEnergia(int _energia) { energia = _energia; }
 
 	// Metodos varios
-	bool tratarDeMover(MoveDirection _direccionNueva);
 	void restarEnergia();
 
 	// Manejador de eventos de pacman

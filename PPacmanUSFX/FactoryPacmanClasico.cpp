@@ -1,7 +1,7 @@
 #include "FactoryPacmanClasico.h"
 
 GameObject* FactoryPacmanClasico::createPacmanInstance(Tile* _tile, TextureManager* _textureManager, int _posicionX, int _posicionY, int _velocidad) {
-    return new PacmanClasico(_tile, _textureManager->getTexture("pacman_clasico"), _posicionX, _posicionY, _velocidad);
+    return Pacman:: crearInstancia(_tile, _textureManager->getTexture("pacman_clasico"), _posicionX, _posicionY, _velocidad);
 }
 
 GameObject* FactoryPacmanClasico::createFantasmaInstance(Tile* _tile, TextureManager* _textureManager, int _posicionX, int _posicionY, int _velocidad) {

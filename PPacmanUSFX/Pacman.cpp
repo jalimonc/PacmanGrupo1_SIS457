@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include "Pacman.h"
 
-//Pacman* Pacman::instancia = nullptr;
-//
-//Pacman* Pacman::crearInstancia(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _ancho, int _alto, int _anchoPantalla, int _altoPantalla, int _velocidadPatron) {
-//	if (instancia == nullptr) {
-//		instancia = new Pacman(_tile, _texturaPacman, _posicionX, _posicionY, _ancho, _alto, _anchoPantalla, _altoPantalla, _velocidadPatron);
-//	}
-//	
-//	return instancia;
-//
-//}
+Pacman* Pacman::instancia = nullptr;
+
+Pacman* Pacman::crearInstancia(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _velocidad) {
+	if (instancia == nullptr) {
+		instancia = new Pacman(_tile, _texturaPacman, _posicionX, _posicionY, _velocidad);
+	}
+	return instancia;
+}
 
 Pacman::Pacman(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _velocidad) :
 	GameObject(_texturaPacman, _posicionX, _posicionY)
@@ -255,5 +253,4 @@ void Pacman::deleteGameObject()
 	GameObject::deleteGameObject();
 	tileActual->setPacman(nullptr);
 }
-
 
