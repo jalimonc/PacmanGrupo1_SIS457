@@ -11,5 +11,5 @@ xxxxx.xabcd  x.xxxxx
 xxxxx.xxxxxxxx.xxxxx
 x..................x
 x.xxxxxxxxxxxxxxxx.x
-x........p.........x
+x......p...........x
 xxxxxxxxxxxxxxxxxxxx

@@ -16,20 +16,19 @@ private:
 public:
 	static int anchoTileGraph;
 	static int altoTileGraph;
-	
+	static int anchoPantalla;
+	static int altoPantalla;
 		
 public:
 	TileGraph();
-	TileGraph(int _anchoTileGraph, int _altoTileGraph);
+	TileGraph(int _anchoTileGraph, int _altoTileGraph, int _anchoPantalla, int _altoPantalla);
 	~TileGraph();
 
-	int getAnchoTile() { return anchoTileGraph; }
-	int getAltoTile() { return altoTileGraph; }
 	void reconfigurar(int _anchoTileGraph, int _altoTileGraph);
 	Tile* getTileEn(int _x, int _y);
+
 	array<Tile*, 4> get4Vecinos(Tile* _tile);
 	array<Tile*, 8> get8Vecinos(Tile* _tile);
-
 
 	array<Tile*, 4> GetNeighbours(Tile* _tile);
 	Pacman* getPacman();

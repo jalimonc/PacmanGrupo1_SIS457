@@ -1,56 +1,51 @@
 #pragma once
+#include <iostream>
+#include <string>
+#include <algorithm>
+
 #include <SDL.h>
-#include "GameObject.h"
+
+#include "GamePawn.h"
+#include "Texture.h"
+#include "Tile.h"
 #include "TileGraph.h"
 #include "MoveDirection.h"
-#include "TextureAnimation.h" 
 #include "Moneda.h"
-#include "Fruta.h"
+#include "GamePawnControllerKey1.h"
 
 using namespace std;
 
-class Pacman : public GameObject
+class Pacman : public GamePawn
 {
+private:
+	static Pacman* instancia;
+	Pacman(Tile* _tile, Texture* _textura);
 protected:
 	
+	//static Pacman* instancia;
 
-	MoveDirection direccionActual;
-	MoveDirection direccionSiguiente;
+	//int estado;
 
-
-	int velocidad;
-
-	TextureAnimation* texturaAnimacion;
-
-
-	int energia;
-	int	state;
-
-	
+	GameObjectType returType() { return PACMAN; }
 public:
-	
-	Pacman(Tile* _tile, Texture* _texturaPacman, int _velocidad);
-	
-	
-	~Pacman();
+	//Constructores y destructores
+	static Pacman* crearInstancia(Tile* _tile, Texture* _textura);
+	~Pacman() {};
 
+	//	static Pacman* crearInstancia(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _ancho, int _alto, int _anchoPantalla, int _altoPantalla, int _velocidadPatron);
 
-	int getVelocidad() { return velocidad; }
-	int getEnergia() { return energia; }
-	int getState() { return state; }
+	//Metodos accesores
+	/*int getEstado() { return estado; }
+	void setEstado(int _estado) { estado = _estado; }*/
+	void setTileActual(Tile* _tileNuevo) override;
 
-	void setVelocidad(int _velocidad) { velocidad = _velocidad; }
-	void setTile(Tile* _tileNuevo);
-	void setEnergia(int _energia) { energia = _energia; }
-	void setState(int _state) { state = _state; }
+	// Metodos varios
 
-	
-	bool tratarDeMover(MoveDirection _direccionNueva);
-	void restarEnergia();
-
-	
-	void handleEvent(SDL_Event* event) override;
-	void update() override;
+	//Metodos virtuales, redefinidos o sobrecargados
+	//void handleEvent(SDL_Event* event);
+	// Mover pacman
+	void update();
+	// Renderizar imagen pacman
 	void render() override;
 	//void update();
 	void deleteGameObject() override;

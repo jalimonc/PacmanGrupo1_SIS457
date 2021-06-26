@@ -1,11 +1,16 @@
 #pragma once
+#include <iostream>
+#include <vector>
 #include <SDL.h>
-#include "GameObject.h"
 
+#include "GameActor.h"
+#include "Texture.h"
+#include "TileGraph.h"
+#include "Tile.h"
 
 using namespace std;
 
-enum TIPO_FRUTA {
+enum TipoFruta {
 	TIPO_FRUTA_GUINDA,
 	TIPO_FRUTA_PLATANO,
 	TIPO_FRUTA_NARANJA,
@@ -13,17 +18,10 @@ enum TIPO_FRUTA {
 	TIPO_FRUTA_MAXIMO
 };
 
-enum GameFrutaType {
-	FRUTA_CLASICO,
-	FRUTA_GALACTICO,
-	FRUTA_ASESINO
-};
-
-class Fruta : public GameObject {
+class Fruta : public GameActor {
 protected:
 
-	TIPO_FRUTA tipoFruta;
-	GameFrutaType GameFrutaTipo;
+	TipoFruta tipoFruta;
 
 	int tiempoVisible;
 	int tiempoInvisible;
@@ -32,34 +30,34 @@ protected:
 	int contadorTiempoInvisible;
 	int numeroFrutaVisible;
 
-	Tile* tileActual;
-	
+	//GameObjectType returType() { return FRUTA; }
 public:
 
-	
-	Fruta(Tile* _tile, Texture* _frutaTexture);
+	//vector<Texture*>frutaTexture;
+	//Constructores y destructores
+	Fruta(Tile* _tile, Texture* _texture);
 	~Fruta();
-	void reconfigurar(Tile* _tileNuevo, TIPO_FRUTA tipoFruta);
+
+	//Metodos accesores
 	
-	
-	
+	TipoFruta getTipoFruta() { return tipoFruta; }
 	int getTiempoVisible() { return tiempoVisible; }
 	int getTiempoInvisible() { return tiempoInvisible; }
-	Tile* getTileActual() { return tileActual; }
 
-	void setTipoFruta(TIPO_FRUTA _tipoFruta) { tipoFruta = _tipoFruta; }
+	void setTipoFruta(TipoFruta _tipoFruta) { tipoFruta = _tipoFruta; }
 	void setTiempoVisible(int _tiempoVisible) { tiempoVisible = _tiempoVisible; }
 	void setTiempoInvisible(int _tiempoInvisible) { tiempoInvisible = _tiempoInvisible; }
-	void setTileActual(Tile* _tileNuevo);
-	TIPO_FRUTA getTipoFruta() { return tipoFruta; }
-	GameFrutaType getTipo() { return GameFrutaTipo; }
+	void setTileActual(Tile* _tileNuevo) {};
 
-	void setTile(Tile* _tileNuevo);
+	// Metodos varios
 
-	void update();
-	void render() override;
+	// Manejador de eventos de la fruta
+	//void handleEvent(SDL_Event& e);
 
-	void deleteGameObject() override;
+	// Mostrar u ocultar la fruta
+	void update() {};
+	// Renderizar imagen fruta
+	//void render();
 };
 
 
