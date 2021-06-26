@@ -3,21 +3,17 @@
 
 using namespace std;
 
-Fruta::Fruta(Tile* _tile, Texture* _frutaTexture, int _posicionX, int _posicionY) :
-	GameObject( _frutaTexture, _posicionX, _posicionY)
+Fruta::Fruta(Tile* _tile, Texture* _frutaTexture) :
+	GameObject(_frutaTexture, _tile)
 {
 	tileActual = _tile;
 
-	if (tileActual != nullptr) {
-		tileActual->setMoneda(nullptr);
+	if (tileActual != nullptr)
+		tileActual->setFruta(this);
 
-		posicionX = tileActual->getPosicionX() * Tile::anchoTile;
-		posicionY = tileActual->getPosicionY() * Tile::altoTile;
-	}
-	else {
-		posicionX = 0;
-		posicionY = 0;
-	}
+	tipoFruta = TIPO_FRUTA_FRUTILLA;
+
+	visible = false;
 
 	tipoFruta = TIPO_FRUTA_FRUTILLA;
 	
@@ -29,6 +25,4 @@ Fruta::Fruta(Tile* _tile, Texture* _frutaTexture, int _posicionX, int _posicionY
 	contadorTiempoInvisible = 0;
 	int numeroFrutaVisible = 0;
 }
-
-
 

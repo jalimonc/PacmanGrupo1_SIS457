@@ -2,8 +2,6 @@
 
 int TileGraph::anchoTileGraph = 0;
 int TileGraph::altoTileGraph = 0;
-int TileGraph::anchoPantalla = 0;
-int TileGraph::altoPantalla = 0;
 
 TileGraph::TileGraph()
 {
@@ -13,18 +11,15 @@ TileGraph::TileGraph()
 	altoTileGraph = 0;
 }
 
-TileGraph::TileGraph(int _anchoTileGraph, int _altoTileGraph, int _anchoPantalla, int _altoPantalla)
+TileGraph::TileGraph(int _anchoTileGraph, int _altoTileGraph)
 {
 	for (int y = 0; y < _altoTileGraph; y++) {
 		for (int x = 0; x < _anchoTileGraph; x++) {
 			vectorTilesGraph.push_back(new Tile(x, y));
 		}
 	}
-
 	anchoTileGraph = _anchoTileGraph;
 	altoTileGraph = _altoTileGraph;
-	anchoPantalla = _anchoPantalla;
-	altoPantalla = _altoPantalla;
 }
 
 void TileGraph::reconfigurar(int _anchoTileGraph, int _altoTileGraph)
@@ -67,6 +62,12 @@ Tile* TileGraph::getTileEn(int _x, int _y)
 
 	return vectorTilesGraph[indice];
 }
+
+array<Tile*, 4> TileGraph::GetNeighbours(Tile* _tile)
+{
+	return get4Vecinos(_tile);
+}
+
 
 array<Tile*, 4> TileGraph::get4Vecinos(Tile* _tile)
 {

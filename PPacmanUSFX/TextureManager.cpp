@@ -18,22 +18,31 @@ TextureManager::TextureManager()
 	fantasmaClasico4Texture = new Texture();
 	fantasmaClasico4Texture->loadFromImage(pathFantasmaClasico4);
 	addTexture("fantasma_clasico4", fantasmaClasico4Texture);
+
 	frutaClasicoTexture = new Texture();
 	frutaClasicoTexture->loadFromImage(pathFrutaClasico);
 	addTexture("fruta_clasico", frutaClasicoTexture);
+
 	monedaClasicoTexture = new Texture();
 	monedaClasicoTexture->loadFromImage(pathMonedaClasico);
 	addTexture("moneda_clasico", monedaClasicoTexture);
+
 	superMonedaClasicoTexture = new Texture();
 	superMonedaClasicoTexture->loadFromImage(pathSuperMonedaClasico);
 	addTexture("supermoneda_clasico", superMonedaClasicoTexture);
+
 	paredClasicoTexture = new Texture();
 	paredClasicoTexture->loadFromImage(pathParedClasico);
 	addTexture("pared_clasico", paredClasicoTexture);
 
+	paredClasicoAdapterTexture = new Texture();
+	paredClasicoAdapterTexture->loadFromImage(pathParedClasicoAdapter);
+	addTexture("pared_clasico_adapter", paredClasicoAdapterTexture);
+
 	pacmanGalacticoTexture = new Texture();
 	pacmanGalacticoTexture->loadFromImage(pathPacmanGalactico);
 	addTexture("pacman_galactico", pacmanGalacticoTexture);
+
 	fantasmaGalactico1Texture = new Texture();
 	fantasmaGalactico1Texture->loadFromImage(pathFantasmaGalactico1);
 	addTexture("fantasma_galactico1", fantasmaGalactico1Texture);
@@ -63,6 +72,15 @@ TextureManager::TextureManager()
 	paredGalacticoTexture->loadFromImage(pathParedGalactico);
 	addTexture("pared_galactico", paredGalacticoTexture);
 
+
+	
+}
+TextureManager* TextureManager::instance = nullptr;
+
+TextureManager* TextureManager::createInstance() {
+	if (instance == nullptr)
+		instance = new TextureManager();
+	return instance;
 }
 
 TextureManager::~TextureManager() {
@@ -76,7 +94,6 @@ void TextureManager::addTexture(string _key, Texture* _texture)
 
 void TextureManager::free()
 {
-	//for (auto elementoMapTexturas : mapTexturas) {
 	for (pair<string, Texture*> elementoMapTexturas : mapTexturas) {
 		//delete elementoMapTexturas.second;
 		mapTexturas.erase(elementoMapTexturas.first);

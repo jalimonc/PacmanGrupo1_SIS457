@@ -1,15 +1,101 @@
-﻿  FactoryPacmanClasico.cpp
+﻿  Factory.cpp
+  FactoryPacmanAsesino.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(10,17): error C3668: 'FactoryPacmanAsesino::createPacmanInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(11,17): error C3668: 'FactoryPacmanAsesino::createParedInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(12,17): error C3668: 'FactoryPacmanAsesino::createMonedaInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.cpp(4,29): error C2061: error de sintaxis: identificador 'PacmanAsesino'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.cpp(8,28): error C2061: error de sintaxis: identificador 'ParedAsesino'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.cpp(12,29): error C2061: error de sintaxis: identificador 'MonedaAsesino'
+  FactoryPacmanClasico.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(12,17): error C3668: 'FactoryPacmanClasico::createPacmanInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(13,17): error C3668: 'FactoryPacmanClasico::createParedInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(14,17): error C3668: 'FactoryPacmanClasico::createMonedaInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.cpp(3,150): error C2511: 'GameObject *FactoryPacmanClasico::createPacmanInstance(Tile *,TextureManager *,int,int,int)': la función miembro sobrecargada no se ha encontrado en 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(8): message : vea la declaración de 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.cpp(7,152): error C2509: 'createFantasmaInstance': función miembro no declarada en 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(8): message : vea la declaración de 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.cpp(15,151): error C2511: 'GameObject *FactoryPacmanClasico::createParedInstance(Tile *,TextureManager *,int,int,bool)': la función miembro sobrecargada no se ha encontrado en 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(8): message : vea la declaración de 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.cpp(19,133): error C2509: 'createFrutaInstance': función miembro no declarada en 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(8): message : vea la declaración de 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.cpp(23,134): error C2511: 'GameObject *FactoryPacmanClasico::createMonedaInstance(Tile *,TextureManager *,int,int)': la función miembro sobrecargada no se ha encontrado en 'FactoryPacmanClasico'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(8): message : vea la declaración de 'FactoryPacmanClasico'
   FactoryPacmanGalactico.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanGalactico.cpp(8,126): error C2661: 'FantasmaGalactico::FantasmaGalactico': ninguna función sobrecargada acepta 5 argumentos
   Fantasma.cpp
+  FantasmaAsesino.cpp
   FantasmaClasico.cpp
   FantasmaGalactico.cpp
+  FantasmasFactory.cpp
+  Fruta.cpp
+  FrutaAsesino.cpp
+  FrutaClasico.cpp
+  FrutaGalactico.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FrutaGalactico.cpp(6,53): error C2661: 'Fruta::Fruta': ninguna función sobrecargada acepta 4 argumentos
   GameManager.cpp
-E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457\PPacmanUSFX\GameManager.cpp(31,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(12,17): error C3668: 'FactoryPacmanClasico::createPacmanInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(13,17): error C3668: 'FactoryPacmanClasico::createParedInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(14,17): error C3668: 'FactoryPacmanClasico::createMonedaInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(10,17): error C3668: 'FactoryPacmanAsesino::createPacmanInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(11,17): error C3668: 'FactoryPacmanAsesino::createParedInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(12,17): error C3668: 'FactoryPacmanAsesino::createMonedaInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\GameManager.cpp(30,12): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\GameManager.cpp(32,41): error C2661: 'TileGraph::TileGraph': ninguna función sobrecargada acepta 4 argumentos
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\GameManager.cpp(33,39): error C2248: 'TextureManager::TextureManager': no se puede obtener acceso al miembro private miembro declarado en la clase 'TextureManager'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\TextureManager.h(66): message : vea la declaración de 'TextureManager::TextureManager'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\TextureManager.h(6): message : vea la declaración de 'TextureManager'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\GameManager.cpp(57,32): error C2039: "getIdObjeto": no es un miembro de "GameObject"
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\GameObject.h(12): message : vea la declaración de 'GameObject'
+  GameObject.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\GameObject.cpp(75,27): error C2084: la función 'GameObject::~GameObject(void)' ya tiene un cuerpo
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\GameObject.h(43): message : vea la definición anterior de '{dtor}'
+  GamePanel.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\GamePanel.cpp(3,92): error C2661: 'GameObject::GameObject': ninguna función sobrecargada acepta 3 argumentos
   main.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(12,17): error C3668: 'FactoryPacmanClasico::createPacmanInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(13,17): error C3668: 'FactoryPacmanClasico::createParedInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(14,17): error C3668: 'FactoryPacmanClasico::createMonedaInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(10,17): error C3668: 'FactoryPacmanAsesino::createPacmanInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(11,17): error C3668: 'FactoryPacmanAsesino::createParedInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(12,17): error C3668: 'FactoryPacmanAsesino::createMonedaInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
   MapGenerator.cpp
-  Pacman.cpp
-  PacmanClasico.cpp
-  PacmanGalactico.cpp
-  ParedGalactico.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(12,17): error C3668: 'FactoryPacmanClasico::createPacmanInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(13,17): error C3668: 'FactoryPacmanClasico::createParedInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanClasico.h(14,17): error C3668: 'FactoryPacmanClasico::createMonedaInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(10,17): error C3668: 'FactoryPacmanAsesino::createPacmanInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(11,17): error C3668: 'FactoryPacmanAsesino::createParedInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FactoryPacmanAsesino.h(12,17): error C3668: 'FactoryPacmanAsesino::createMonedaInstance': el método con el especificador de invalidación 'override' no invalidó ningún método de clase base
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\MapGenerator.cpp(34,21): error C2039: "initialize": no es un miembro de "FantasmasFactory"
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\FantasmasFactory.h(7): message : vea la declaración de 'FantasmasFactory'
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\MapGenerator.cpp(34,31): error C3861: 'initialize': no se encontró el identificador
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\MapGenerator.cpp(59,72): error C2660: 'Fantasma::reconfigurar': la función no acepta 4 argumentos
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\Fantasma.h(37,7): message : vea la declaración de 'Fantasma::reconfigurar'
+  Moneda.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\Moneda.cpp(4,12): error C2661: 'GameObject::GameObject': ninguna función sobrecargada acepta 3 argumentos
+  MonedaClasico.cpp
   Generando código...
-  PPacmanUSFX.vcxproj -> E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457\x64\Debug\PPacmanUSFX.exe
+  Compilando...
+  MonedaGalactico.cpp
+  Pacman.cpp
+  PacmanBase.cpp
+  PacmanClasico.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\PacmanClasico.cpp(11,8): error C2661: 'Pacman::Pacman': ninguna función sobrecargada acepta 5 argumentos
+  PacmanGalactico.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\PacmanGalactico.cpp(13,8): error C2661: 'Pacman::Pacman': ninguna función sobrecargada acepta 5 argumentos
+  Pared.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\Pared.cpp(4,50): error C2661: 'GameObject::GameObject': ninguna función sobrecargada acepta 3 argumentos
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\Pared.cpp(52,35): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\Pared.cpp(54,17): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+  ParedAsesino.cpp
+  ParedClasico.cpp
+  ParedClasicoAdapter.cpp
+  ParedGalactico.cpp
+  PathFinder.cpp
+E:\3ro SEMESTRE\sis457\PacmanGrupo1_SIS457-main\PPacmanUSFX\PathFinder.cpp(77,57): warning C4244: 'return': conversión de 'int' a 'float'; posible pérdida de datos
+  Texture.cpp
+  TextureAnimation.cpp
+  TextureManager.cpp
+  Tile.cpp
+  TileGraph.cpp
+  Wall.cpp
+  Generando código...

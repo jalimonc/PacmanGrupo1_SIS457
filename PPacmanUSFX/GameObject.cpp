@@ -1,30 +1,30 @@
 #include "GameObject.h"
 
-int GameObject::numeroObjetosCreados = 0;
 TileGraph* GameObject::tileGraph = nullptr;
 
-GameObject::GameObject(Texture* _textura, int _posicionX, int _posicionY) {
+GameObject::GameObject() {}
+
+GameObject::GameObject(Texture* _textura, Tile* _tile) {
 	textura = _textura;
-	posicionX = _posicionX;
-	posicionY = _posicionY;
-	alto = 0;
-	ancho = 0;
+	tileActual = _tile;
+	if (tileActual != nullptr) {
+		tileSiguiente = tileActual;
+		posicionX = tileActual->getPosicionX() * Tile::anchoTile;
+		posicionY = tileActual->getPosicionY() * Tile::altoTile;
+	}
+	ancho = Tile::anchoTile;
+	alto = Tile::altoTile;
 	visible = true;
 	eliminar = false;
 	enMovimiento = false;
-	numeroObjetosCreados++;
-	idObjeto = numeroObjetosCreados;
-	
-
 	numeroFrame = 0;
 	contadorFrames = 0;
-	framesMovimiento = 1;
-	colisionador = new SDL_Rect({ _posicionX, _posicionY, ancho, alto});
+	colisionador = new SDL_Rect({ posicionX, posicionY, 0, 0 });
 }
 
 void GameObject::render()
 {
-	SDL_Rect* cuadroAnimacion = new SDL_Rect({ 25 * numeroFrame, 0, getAncho(), getAlto() });
+	SDL_Rect* cuadroAnimacion = new SDL_Rect({ 25 * numeroFrame, 0, ancho, alto });
 
 	// Renderizar en la pantalla
 	textura->render(getPosicionX(), getPosicionY(), cuadroAnimacion);
@@ -70,6 +70,10 @@ bool GameObject::revisarColision(const SDL_Rect* _colisionador1, const SDL_Rect*
 	}
 
 	return true;
+}
+
+GameObject::~GameObject() {
+	deleteGameObject();
 }
 
 void GameObject::update() {

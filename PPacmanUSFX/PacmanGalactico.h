@@ -22,6 +22,29 @@ using namespace std;
 class PacmanGalactico :
 	public Pacman
 {
+public:
+	//METODOS 
+
+	//Constructores y destructores
+	PacmanGalactico(Tile* _tile, Texture* _texturaPacmanClasico, int _posicionX, int _posicionY, int _velocidad);
+	~PacmanGalactico();
+
+	static const int Width = 25;
+	static const int Height = 25;
+
+
+	//Metodos accesores
+
+
+
+	// Mark the object to be deleted
+	//void Delete();
+	
+
+
+
+	// Metodos varios
+	bool tratarDeMover(MoveDirection _direccionNueva);
 };
 
 

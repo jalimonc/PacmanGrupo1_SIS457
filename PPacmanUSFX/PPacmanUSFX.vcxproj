@@ -20,12 +20,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Factory.cpp" />
+    <ClCompile Include="FactoryPacmanAsesino.cpp" />
     <ClCompile Include="FactoryPacmanClasico.cpp" />
     <ClCompile Include="FactoryPacmanGalactico.cpp" />
     <ClCompile Include="Fantasma.cpp" />
+    <ClCompile Include="FantasmaAsesino.cpp" />
     <ClCompile Include="FantasmaClasico.cpp" />
     <ClCompile Include="FantasmaGalactico.cpp" />
+    <ClCompile Include="FantasmasFactory.cpp" />
     <ClCompile Include="Fruta.cpp" />
+    <ClCompile Include="FrutaAsesino.cpp" />
     <ClCompile Include="FrutaClasico.cpp" />
     <ClCompile Include="FrutaGalactico.cpp" />
     <ClCompile Include="GameManager.cpp" />
@@ -37,10 +41,13 @@
     <ClCompile Include="MonedaClasico.cpp" />
     <ClCompile Include="MonedaGalactico.cpp" />
     <ClCompile Include="Pacman.cpp" />
+    <ClCompile Include="PacmanBase.cpp" />
     <ClCompile Include="PacmanClasico.cpp" />
     <ClCompile Include="PacmanGalactico.cpp" />
     <ClCompile Include="Pared.cpp" />
+    <ClCompile Include="ParedAsesino.cpp" />
     <ClCompile Include="ParedClasico.cpp" />
+    <ClCompile Include="ParedClasicoAdapter.cpp" />
     <ClCompile Include="ParedGalactico.cpp" />
     <ClCompile Include="PathFinder.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -48,19 +55,25 @@
     <ClCompile Include="TextureManager.cpp" />
     <ClCompile Include="Tile.cpp" />
     <ClCompile Include="TileGraph.cpp" />
+    <ClCompile Include="Wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Factory.h" />
+    <ClInclude Include="FactoryPacmanAsesino.h" />
     <ClInclude Include="FactoryPacmanClasico.h" />
     <ClInclude Include="FactoryPacmanGalactico.h" />
     <ClInclude Include="Fantasma.h" />
+    <ClInclude Include="FantasmaAsesino.h" />
     <ClInclude Include="FantasmaClasico.h" />
     <ClInclude Include="FantasmaGalactico.h" />
+    <ClInclude Include="FantasmasFactory.h" />
     <ClInclude Include="Fruta.h" />
+    <ClInclude Include="FrutaAsesino.h" />
     <ClInclude Include="FrutaClasico.h" />
     <ClInclude Include="FrutaGalactico.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectType.h" />
     <ClInclude Include="GamePanel.h" />
     <ClInclude Include="Laberinto.h" />
     <ClInclude Include="MapGenerator.h" />
@@ -69,10 +82,13 @@
     <ClInclude Include="MonedaGalactico.h" />
     <ClInclude Include="MoveDirection.h" />
     <ClInclude Include="Pacman.h" />
+    <ClInclude Include="PacmanBase.h" />
     <ClInclude Include="PacmanClasico.h" />
     <ClInclude Include="PacmanGalactico.h" />
     <ClInclude Include="Pared.h" />
+    <ClInclude Include="ParedAsesino.h" />
     <ClInclude Include="ParedClasico.h" />
+    <ClInclude Include="ParedClasicoAdapter.h" />
     <ClInclude Include="ParedGalactico.h" />
     <ClInclude Include="PathFinder.h" />
     <ClInclude Include="PriorityQueue.h" />
@@ -82,6 +98,7 @@
     <ClInclude Include="Tile.h" />
     <ClInclude Include="TileGraph.h" />
     <ClInclude Include="TipoTexturaPared.h" />
+    <ClInclude Include="Wall.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Clyde.bmp" />

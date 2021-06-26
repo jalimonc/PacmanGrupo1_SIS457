@@ -6,7 +6,6 @@
 #include "FrutaGalactico.h"
 #include "MonedaGalactico.h"
 #include "Tile.h"
-#include "Pacman.h"
 
 class FactoryPacmanGalactico :
     public Factory

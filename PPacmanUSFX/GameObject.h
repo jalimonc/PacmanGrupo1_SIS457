@@ -2,6 +2,8 @@
 #include <iostream>
 #include <string>
 #include "Texture.h"
+#include "GameObjectType.h"
+#include "Tile.h"
 
 using namespace std;
 
@@ -10,27 +12,18 @@ class TileGraph;
 class GameObject
 {
 protected:
-	string nombre;
-	static int numeroObjetosCreados;
-
-	// Posicion en el eje X y Y
-	int idObjeto;
-
-	// Si el objeto es visible
-	bool eliminar;
-	
-//Propiedades para representacion grafica
-protected:
-	// Textura para representacion grafica del objeto
 	Texture* textura;
+
+	Tile* tileActual;
+	Tile* tileSiguiente;
 
 	bool visible;
 	bool enMovimiento;
+	bool eliminar;
 
 	int posicionX;
 	int posicionY;
 
-	// Ancho y Alto de la imagen del objeto en pixeles
 	int ancho;
 	int alto;
 
@@ -43,14 +36,13 @@ protected:
 public:
 	static TileGraph* tileGraph;
 
-
 public:
 	//Constructores y destructores
-	GameObject(Texture* _textura, int _posicionX, int _posicionY);
+	GameObject();
+	GameObject(Texture* _textura, Tile* _tile);
 	~GameObject() {};
 
 	//Metodos accesores
-	int getIdObjeto() { return idObjeto; }
 	int getPosicionX() { return posicionX; }
 	int getPosicionY() { return posicionY; }
 	int getAncho() { return ancho; }
@@ -58,7 +50,9 @@ public:
 	bool getVisible() { return visible; }
 	bool getEliminar() { return eliminar; }
 	bool getEnMovimiento() { return enMovimiento; }
-
+	Tile* getTile() { return tileActual; }
+	Tile* getTileSiguiente() { return tileSiguiente; }
+	
 	void setPosicionX(int _posicionX) { posicionX = _posicionX; }
 	void setPosicionY(int _posicionY) { posicionY = _posicionY; }
 	void setAncho(int _ancho) { ancho = _ancho; }
@@ -66,6 +60,8 @@ public:
 	void setVisible(bool _visible) { visible = _visible; }
 	void setEliminar(bool _eliminar) { eliminar = _eliminar; }
 	void setEnMovimiento(bool _enMovimiento) { enMovimiento = _enMovimiento; }
+	virtual void setTile(Tile* _tileNuevo) {};
+	void setTileSiguiente(Tile* _tileSiguiente) { tileSiguiente = _tileSiguiente; }
 
 	// Metodos varios
 	void setParametrosAnimacion(int _framesMovimiento) { framesMovimiento = _framesMovimiento; }
@@ -74,11 +70,13 @@ public:
 	bool revisarColision(const SDL_Rect* _colisionador1, const SDL_Rect* _colisionador2);
 
 
-	// Renderizar imagen
+	
 	virtual void render();
 	virtual void update();
 	virtual void handleEvent(SDL_Event* event) {};
 	virtual void deleteGameObject() { eliminar = true; }
 	virtual void free(){};
+	void Delete() { deleteGameObject(); }
+	void Free() { free(); }
 };
 
