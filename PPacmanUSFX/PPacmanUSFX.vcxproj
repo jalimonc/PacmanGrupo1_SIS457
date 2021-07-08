@@ -19,6 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GUI\Button.cpp" />
+    <ClCompile Include="GUI\Component.cpp" />
     <ClCompile Include="Fantasma.cpp" />
     <ClCompile Include="Fruta.cpp" />
     <ClCompile Include="GameActor.cpp" />
@@ -28,12 +30,19 @@
     <ClCompile Include="GamePawnControllerKey2.cpp" />
     <ClCompile Include="GamePawnController.cpp" />
     <ClCompile Include="GamePawnControllerKey1.cpp" />
+    <ClCompile Include="GUI\GUIComposite.cpp" />
+    <ClCompile Include="GUI\GUI.cpp" />
+    <ClCompile Include="GUI\Panel.cpp" />
+    <ClCompile Include="GUI\Label.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MapGenerator.cpp" />
     <ClCompile Include="Moneda.cpp" />
+    <ClCompile Include="MsPacman.cpp" />
     <ClCompile Include="Pacman.cpp" />
+    <ClCompile Include="Pantano.cpp" />
     <ClCompile Include="Pared.cpp" />
     <ClCompile Include="PathFinder.cpp" />
+    <ClCompile Include="GUI\Shape.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="AnimationFrames.cpp" />
     <ClCompile Include="TextureManager.cpp" />
@@ -41,6 +50,8 @@
     <ClCompile Include="TileGraph.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GUI\Button.h" />
+    <ClInclude Include="GUI\Component.h" />
     <ClInclude Include="Fantasma.h" />
     <ClInclude Include="Fruta.h" />
     <ClInclude Include="GameActor.h" />
@@ -51,13 +62,20 @@
     <ClInclude Include="GamePawnControllerKey2.h" />
     <ClInclude Include="GamePawnController.h" />
     <ClInclude Include="GamePawnControllerKey1.h" />
+    <ClInclude Include="GUI\GUIComposite.h" />
+    <ClInclude Include="GUI\GUI.h" />
+    <ClInclude Include="GUI\Panel.h" />
+    <ClInclude Include="GUI\Label.h" />
     <ClInclude Include="MapGenerator.h" />
     <ClInclude Include="Moneda.h" />
     <ClInclude Include="MoveDirection.h" />
+    <ClInclude Include="MsPacman.h" />
     <ClInclude Include="Pacman.h" />
+    <ClInclude Include="Pantano.h" />
     <ClInclude Include="Pared.h" />
     <ClInclude Include="PathFinder.h" />
     <ClInclude Include="PriorityQueue.h" />
+    <ClInclude Include="GUI\Shape.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="AnimationFrames.h" />
     <ClInclude Include="TextureManager.h" />

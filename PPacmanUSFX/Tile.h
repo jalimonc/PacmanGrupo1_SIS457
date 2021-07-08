@@ -8,6 +8,7 @@ class Fruta;
 class Moneda;
 class Pared;
 class Wall;
+class Pantano;
 
 class Tile
 {
@@ -19,6 +20,7 @@ private:
 	Moneda* moneda;
 	Pared* pared;
 	Wall* wall;
+	Pantano* pantano;
 
 	int posicionX;
 	int posicionY;
@@ -39,6 +41,7 @@ public:
 	Moneda* getMoneda() { return moneda; }
 	Pared* getPared() { return pared; }
 	Wall* GetWall() { return ((Wall*)pared); }
+	Pantano* getPantano() { return pantano; }
 	int getPosicionX() { return posicionX; }
 	int getPosicionY() { return posicionY; }
 	SDL_Point GetPosition() {
@@ -59,5 +62,6 @@ public:
 	void setPosicionX(int _posicionX) { posicionX = _posicionX; }
 	void setPosicionY(int _posicionY) { posicionY = _posicionY; }
 	void SetWall(Wall* _wall) { pared = ((Pared*)_wall); }
+	void setPantano(Pantano* _pantano) { pantano = _pantano; }
 };
 

@@ -13,9 +13,12 @@
 #include "MsPacman.h"
 #include "Fruta.h"
 #include "Pared.h"
+#include "Pantano.h"
 #include "Tile.h"
 #include "TileGraph.h"
 #include "TextureManager.h"
+#include "GUI/Panel.h"
+#include "GUI/GUIComposite.h"
 //#include "FactoryPacmanClasico.h"
 //#include "FactoryPacmanGalactico.h"
 //#include "Factory.h"
@@ -29,14 +32,15 @@ class MapGenerator
 private:
 	vector<GameObject*> vectorObjetosJuego;
 	TileGraph* tileGraph;
-	TextureManager* textureManager;
+	//TextureManager* textureManager;
 	//Factory* factory;
+
 
 	int anchoPantalla;
 	int altoPantalla;
 public:
 	//MapGenerator(TileGraph* _tileGraph, TextureManager* _textureManager, int _anchoPantalla, int _altoPantalla, Factory* fabrica);
-	MapGenerator(TileGraph* _tileGraph, TextureManager* _textureManager, int _anchoPantalla, int _altoPantalla);
+	MapGenerator(TileGraph* _tileGraph, /*TextureManager* _textureManager,*/ int _anchoPantalla, int _altoPantalla);
 
 	// carga el archivo con el mapa del nivel y todos los objetos
 	bool load(string path);

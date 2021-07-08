@@ -34,9 +34,9 @@ void Composite::add(Component* component)
 }
 void Composite::remove(Component* component)
 {
-	//list.erase((std::remove(list.begin(), list.end(), component), list.end());
-	//ilist = list.begin();
-	//list.erase(list.begin(), list.end());
+	/*list.erase((std::remove(list.begin(), list.end(), component), list.end());
+	ilist = list.begin();
+	list.erase(list.begin(), list.end());*/
 }
 void Composite::show(short depth)
 {

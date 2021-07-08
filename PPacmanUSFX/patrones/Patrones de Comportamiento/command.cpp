@@ -1,71 +1,82 @@
-#include <iostream>  #include <string>  using namespace std;
-class Person;
+#include <iostream>
+#include <vector>
+using namespace std;
 
-class Command
-{
-    // 1. Create a class that encapsulates an object and a member function
-    // a pointer to a member function (the attribute's name is "method")
-    Person *object; //    
-    void(Person:: *method)();
-  public:
-    Command(Person *obj = 0, void(Person:: *meth)() = 0)
-    {
-        object = obj; // the argument's name is "meth"
-        method = meth;
-    }
-    void execute()
-    {
-        (object-> *method)(); // invoke the method on the object
-    }
+// Command interface
+class Command {
+public:
+	virtual ~Command();
+	virtual void execute() = 0;
 };
 
-class Person
-{
-    string name;
+Command::~Command() {}
 
-    // cmd is a "black box", it is a method invocation
-    // promoted to "full object status"
-    Command cmd; 
-  public:
-    Person(string n, Command c): cmd(c)
-    {
-        name = n;
-    }
-    void talk()
-    {
-        // "this" is the sender, cmd has the receiver
-        cout << name << " is talking" << endl;
-        cmd.execute(); // ask the "black box" to callback the receiver
-    }
-    void passOn()
-    {
-        cout << name << " is passing on" << endl;
-        
-        // 4. When the sender is ready to callback to the receiver,
-        // it calls execute()
-        cmd.execute(); 
-    }
-    void gossip()
-    {
-        cout << name << " is gossiping" << endl;
-        cmd.execute();
-    }
-    void listen()
-    {
-        cout << name << " is listening" << endl;
-    }
+// Receiver
+class StockTrade {
+public:
+	StockTrade() {}
+	void buy() { cout << "Buy stock" << endl; }
+	void sell() { cout << "Sell stock" << endl; }
 };
 
+// Concrete command 1
+class BuyOrder : public Command {
+	StockTrade* stock;
+
+public:
+	BuyOrder(StockTrade* stock);
+
+	void execute() override;
+};
+
+BuyOrder::BuyOrder(StockTrade* stock) { this->stock = stock; }
+
+void BuyOrder::execute() { stock->buy(); }
+
+// Concrete command 2
+class SellOrder : public Command {
+	StockTrade* stock;
+
+public:
+	SellOrder(StockTrade* stock);
+
+	void execute() override;
+};
+
+SellOrder::SellOrder(StockTrade* stock) { this->stock = stock; }
+
+void SellOrder::execute() { stock->sell(); }
+
+// Invoker
+class StockAgent {
+public:
+	StockAgent();
+	void order(Command* command);
+
+private:
+	// Looking at this command list gives
+	// this order history
+	vector<Command*> commandList;
+};
+
+StockAgent::StockAgent() {}
+
+void StockAgent::order(Command* command)
+{
+	commandList.push_back(command);
+	command->execute();
+}
+
+// Test program
 int main()
 {
-  // Fred will "execute" Barney which will result in a call to passOn()
-  // Barney will "execute" Betty which will result in a call to gossip()
-  // Betty will "execute" Wilma which will result in a call to listen()
-  Person wilma("Wilma", Command());
-  // 2. Instantiate an object for each "callback"
-  // 3. Pass each object to its future "sender"
-  Person betty("Betty", Command(&wilma, &Person::listen));
-  Person barney("Barney", Command(&betty, &Person::gossip));
-  Person fred("Fred", Command(&barney, &Person::passOn));
-  fred.talk();
+	StockTrade stock;
+	BuyOrder buy1(&stock);
+	BuyOrder buy2(&stock);
+	SellOrder sell1(&stock);
+
+	StockAgent agent;
+	agent.order(&buy1);
+	agent.order(&buy2);
+	agent.order(&sell1);
 }

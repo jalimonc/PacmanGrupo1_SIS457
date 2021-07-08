@@ -18,6 +18,13 @@ Pared::Pared(Tile* _tile, Texture* _textura) :
 		posicionX = 0;
 		posicionY = 0;
 	}
+	visible = true;
+
+	tiempoVisible = 300;
+	tiempoInvisible = 0;
+	contadorTiempoVisible = 0;
+	contadorTiempoInvisible = 0;
+	int numeroFrutaVisible = 0;
 };
 
 void Pared::setTileActual(Tile* _tileNuevo) {
@@ -37,7 +44,34 @@ void Pared::setTileActual(Tile* _tileNuevo) {
 		posicionY = 0;
 	}
 
-};
+}
+void Pared::update()
+{
+	if (contadorTiempoVisible >= tiempoVisible) {
+			visible = false;
+		if (contadorTiempoInvisible >= tiempoInvisible ) {
+			int x = 1 + rand() % TileGraph::anchoTileGraph;
+			int y = 1 + rand() % TileGraph::altoTileGraph;
+			if (tileActual != tileGraph->getTileEn(x, y))
+			{
+				visible = true;
+			}
+			else {
+				visible = false;
+				contadorTiempoVisible = 0;
+				contadorTiempoInvisible = 0;
+			}
+				
+		}
+		else {
+			contadorTiempoInvisible++;
+		}
+	}
+	else{
+		contadorTiempoVisible++;
+	}
+	
+}
 
 void Pared::deleteGameObject()
 {

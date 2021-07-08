@@ -1,15 +1,6 @@
 #include <stdio.h>
 #include "Pacman.h"
 
-Pacman* Pacman::instancia = nullptr;
-
-Pacman* Pacman::crearInstancia(Tile* _tile, Texture* _textura) {
-	if (instancia == nullptr) {
-		instancia = new Pacman(_tile, _textura);
-	}
-	return instancia;
-}
-
 Pacman::Pacman(Tile* _tile, Texture* _textura) :GamePawn(_textura)
 {
 	tileActual = _tile;
@@ -120,6 +111,7 @@ void Pacman::update()
 		if ((direccionActual == MOVE_LEFT || direccionActual == MOVE_RIGHT) && posicionX == tileSiguiente->getPosicionX() * Tile::anchoTile)
 			setTileActual(tileSiguiente);
 	}
+	//reposicionar pacman si sale del mapa 
 
 	if (tileSiguiente == nullptr) {
 		switch (direccionSiguiente)
@@ -138,6 +130,24 @@ void Pacman::update()
 			break;
 		}
 	}
+	/*if (tileActual->getPantano() != nullptr )
+	{
+		if (posicionX == 10 && posicionY == 4) 
+		{
+			posicionX = 9;
+			posicionY = 12;
+		}
+		tileActual = tileGraph->getTileEn(posicionX,posicionY);
+	}
+
+	if (tileActual->getPantano() != nullptr) {
+		if(posicionX == 10 && posicionY == 4){
+			tileSiguiente = tileGraph->getTileEn(tileActual->getPosicionX()+1, tileActual->getPosicionY() + 8);
+		}
+		else {
+			tileSiguiente = tileGraph->getTileEn(tileActual->getPosicionX() + 1, tileActual->getPosicionY() + 8);
+		}
+	}*/
 }
 
 void Pacman::render()

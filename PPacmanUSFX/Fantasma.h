@@ -49,6 +49,7 @@ public:
 	void setTileActual(Tile* _tileNuevo);
 
 	// Metodos varios
+	
 	// Actualizar datos fantasma
 	static bool avoidInPathFinder(Tile* _tile);
 	bool hasPositionChanged(SDL_Point firstPos, SDL_Point secondPoint);

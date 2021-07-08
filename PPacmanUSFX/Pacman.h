@@ -17,9 +17,6 @@ using namespace std;
 
 class Pacman : public GamePawn
 {
-private:
-	static Pacman* instancia;
-	Pacman(Tile* _tile, Texture* _textura);
 protected:
 	
 	//static Pacman* instancia;
@@ -29,7 +26,7 @@ protected:
 	GameObjectType returType() { return PACMAN; }
 public:
 	//Constructores y destructores
-	static Pacman* crearInstancia(Tile* _tile, Texture* _textura);
+	Pacman(Tile* _tile, Texture* _textura);
 	~Pacman() {};
 
 	//	static Pacman* crearInstancia(Tile* _tile, Texture* _texturaPacman, int _posicionX, int _posicionY, int _ancho, int _alto, int _anchoPantalla, int _altoPantalla, int _velocidadPatron);
@@ -44,7 +41,7 @@ public:
 	//Metodos virtuales, redefinidos o sobrecargados
 	//void handleEvent(SDL_Event* event);
 	// Mover pacman
-	void update();
+	void update() override;
 	// Renderizar imagen pacman
 	void render() override;
 	//void update();
